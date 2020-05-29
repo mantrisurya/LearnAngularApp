@@ -1,0 +1,25 @@
+<ol>
+    <li>{{names[0]}}</li>
+    <li>{{names[1]}}</li>
+</ol>
+
+ngFor directive example:
+
+<ol>
+    <li *ngFor="let st of names">{{st}}</li>
+</ol>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Index</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let st of names; let counter = index">
+            <td>{{counter}}</td>
+            <td>{{st}}</td>
+        </tr>
+    </tbody>
+</table>

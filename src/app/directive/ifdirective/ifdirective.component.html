@@ -1,0 +1,40 @@
+<div>
+
+    Demo of ngIf directive:
+    <br><br>
+    <button (click)="toggleDisplay()">Toogle Display</button>
+    <br><br>
+    <div *ngIf="displayif" 
+        style=" width: 100px; 
+                height: 100px; 
+                background-color: burlywood;
+                text-align: center;
+                ">
+        display is true !
+    </div>
+<br>
+    Demo of ngIf directive with else scenario:
+    <br><br>
+    <button (click)="toggleDisplayElse()">Toogle Display Else</button>
+    <br><br>
+    <div *ngIf="displayElse; then display else otherDisplay"></div>
+    <ng-template #display>
+        <div style="width: 100px; 
+                    height: 100px; 
+                    background-color: darkkhaki;
+                    text-align: center;">
+            If block
+        </div>
+
+    </ng-template>
+    <ng-template #otherDisplay>
+        <div style="width: 100px; 
+                    height: 100px; 
+                    background-color: darkkhaki;
+                    text-align: center;">
+            Else block!
+        </div>
+
+    </ng-template>
+
+</div>
